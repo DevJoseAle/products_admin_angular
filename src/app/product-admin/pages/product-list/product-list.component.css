@@ -1,0 +1,56 @@
+table {
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin-bottom: 40px
+}
+.title{
+  text-align:left;
+  margin-left:2rem;
+  margin-top: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight:600;
+  font-size:30px;
+  text-transform: capitalize;
+}
+
+.table-list{
+  padding: 10px;
+  text-align: center;
+
+
+}
+
+.table-item{
+  text-align: center;
+}
+
+.floating-button{
+  position: fixed;
+  width: 10rem;
+  border-radius: 2rem;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000
+}
+
+.noData{
+  margin-top:3rem;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.active{
+  color: #168100;
+  font-weight: 600;
+}
+.inactive{
+  color: #c50000;
+  font-weight: 600;
+}
+
+.plus{
+  font-size: 30px;
+  font-weight: bold;
+}

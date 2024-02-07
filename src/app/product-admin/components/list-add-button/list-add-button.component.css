@@ -1,0 +1,12 @@
+.plus{
+  font-size: 30px;
+  font-weight: bold;
+}
+.floating-button{
+  position: fixed;
+  width: 10rem;
+  border-radius: 2rem;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000
+}

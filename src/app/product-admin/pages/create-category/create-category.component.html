@@ -1,0 +1,65 @@
+
+<div>
+
+  <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
+    <div  class='form-container'>
+
+      <div class='form-input'>
+
+        <mat-form-field disabled appearance="outline">
+          <mat-label>ID</mat-label>
+          <input
+          type="text"
+          matInput
+          formControlName="id" placeholder="ID"
+
+            >
+        </mat-form-field>
+
+        <span *ngIf="isValidField('id')" class="error-msg">Error</span>
+      </div>
+      <div class='form-input'>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Nombre Categoria</mat-label>
+          <input  formControlName="name" matInput placeholder="EJ: Electrónicos">
+
+        </mat-form-field>
+
+        <span *ngIf="isValidField('name')"class="error-msg">Error</span>
+      </div>
+      <div class='form-input'>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Fecha Creacion</mat-label>
+          <input  formControlName="createdAt" matInput placeholder="EJ: Electrónicos">
+
+        </mat-form-field>
+
+        <span *ngIf="isValidField('createdAt')" class="error-msg">Error</span>
+      </div>
+
+      <div class='form-input '>
+        <mat-form-field appearance="outline">
+          <mat-label>Descripción</mat-label>
+          <textarea class='text-area'type="textarea" formControlName="description" matInput placeholder="Articulos de electronica"> </textarea>
+        </mat-form-field>
+        <span *ngIf="isValidField('description')" class="error-msg">Error</span>
+      </div>
+      <div class='form-input'>
+          <mat-slide-toggle
+          formControlName="isActive"
+          >
+          {{categoryForm.get('isActive')?.value ? 'Activo' : 'Inactivo'}}
+        </mat-slide-toggle>
+      </div>
+    </div>
+
+    <div>
+
+      <button type="submit" class="edit-button" mat-raised-button>{{toEdit ? 'Editar' : 'Crear'}}</button>
+    </div>
+  </form>
+
+</div>
+
